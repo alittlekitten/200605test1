@@ -1,0 +1,8 @@
+{% for i in blogs.all %}
+    <div class="container">
+        <a href="{% url 'detail' i.id %}"> <h1>{{ i.title }}</h1> </a>
+        <p>{{ i.pub_date }}</p>
+        <p>{{ i.body }}</p>
+    </div>
+{% endfor %}
+<a href="{% url 'write' %}">글쓰기</a>
